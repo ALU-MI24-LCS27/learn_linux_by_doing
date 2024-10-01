@@ -9,5 +9,5 @@ if [ -f "$file" ]; then
 
     echo "Removed duplicates from $file."
 else
-    echo "No CSV files found in $ANALYZED_DIR."
+    echo "No CSV files found."
 fi
