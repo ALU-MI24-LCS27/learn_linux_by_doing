@@ -17,3 +17,11 @@ head -n 1 "$input_file" > "$output_file"
 tail -n +2 "$input_file" | sort -t, -k2,2n | head -n 5 >> "$output_file"
 
 echo "Top 5 lowest temperatures saved to $output_file"
+
+# Extract the top 5 lowest temperatures and save to analyzed directory
+{
+  # Print the header
+  head -n 1 data/satelite_temperature_data.csv
+  # Sort and get top 5 lowest temperatures
+  tail -n +2 data/satelite_temperature_data.csv | sort -t, -k2,2n | head -n 5
+} > analyzed/top-5-lowest-temparatures.csv
