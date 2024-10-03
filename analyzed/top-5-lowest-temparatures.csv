@@ -1,0 +1,19 @@
+#!/bin/bash
+
+# Define the input and output file paths
+input_file="satelite_temperature_data.csv"
+output_file="top-5-lowest-temperatures.csv"
+
+# Check if the input file exists
+if [ ! -f "$input_file" ]; then
+    echo "Error: Input file '$input_file' not found!"
+    exit 1
+fi
+
+# Extract the header and save to output
+head -n 1 "$input_file" > "$output_file"
+
+# Extract the data, sort by temperature, and select the top 5 lowest
+tail -n +2 "$input_file" | sort -t, -k2,2n | head -n 5 >> "$output_file"
+
+echo "Top 5 lowest temperatures saved to $output_file"

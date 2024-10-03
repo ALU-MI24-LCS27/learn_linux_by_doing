@@ -1,0 +1,13 @@
+echo "Month,Temperature
+January,35.6
+February,34.8
+March,36.1
+April,33.7
+May,37.0
+June,32.9
+July,34.0
+August,35.2
+September,33.3
+October,34.5
+November,33.1
+December,36.5" > satelite_temperature_data.csv
