@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Define the path to the input file
+input_file="/path/to/data/satelite_temperature_data.csv"
+
+# Sort the CSV file by the second column (temperature) and extract the top 5 lowest temperatures
+# Assuming the 3rd column is the temperature and 1st column is the month
+cat "$input_file" | #!/bin/bash
+
+# Define the path to the input file
+input_file="/path/to/data/satelite_temperature_data.csv"
+
+# Sort the CSV file by the second column (temperature) and extract the top 5 lowest temperatures
+# Assuming the 3rd column is the temperature and 1st column is the month
+cat "$input_file" | head -n 1 "$in_file" > "$out_file"
+cat $in_file | tail -n +2 | sort -k 3 -t ',' | head -n 5 >> "$out_file" top-5-lowest-temperatures.csv
+
+# Add the header back to the output file
+sed -i '1iMonth,Temperature' top-5-lowest-temperatures.csv
+
+# Output the contents of the resulting file
+cat top-5-lowest-temperatures.csv
