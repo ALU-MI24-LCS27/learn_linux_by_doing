@@ -11,12 +11,3 @@ September,33.3
 October,34.5
 November,33.1
 December,36.5" > satelite_temperature_data.csv
-
-# Extract the top 5 highest temperatures and save to analyzed directory
-{
-  # Print the header
-  head -n 1 data/satelite_temperature_data.csv
-  # Sort and get top 5 highest temperatures
-  tail -n +2 data/satelite_temperature_data.csv | sort -t, -k2,2nr | head -n 5
-} > analyzed/top-5-highest-temparatures.csv
-
